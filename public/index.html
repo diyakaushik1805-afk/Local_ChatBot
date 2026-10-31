@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local AI Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="side">
+      <h1>Local AI Chat</h1>
+      <p class="status" id="status" role="status">Checking Ollama...</p>
+
+      <fieldset>
+        <legend>Assistant style</legend>
+        <label><input type="radio" name="persona" value="general" checked> General assistant</label>
+        <label><input type="radio" name="persona" value="coder"> Code helper</label>
+        <label><input type="radio" name="persona" value="tutor"> Study tutor</label>
+        <label><input type="radio" name="persona" value="concise"> Short answers</label>
+      </fieldset>
+
+      <label class="field" for="customPrompt">System prompt (editable)</label>
+      <textarea id="customPrompt" rows="7"></textarea>
+
+      <button id="clearBtn" type="button" class="ghost">Clear chat</button>
+    </aside>
+
+    <main class="main">
+      <div id="chat" class="chat" aria-live="polite">
+        <p class="empty" id="empty">Type a question, or press Voice and speak.</p>
+      </div>
+      <form id="form" class="composer">
+        <textarea id="input" rows="1" placeholder="Ask something" aria-label="Message"></textarea>
+        <button type="button" id="micBtn" class="ghost">Voice</button>
+        <button type="submit" id="sendBtn">Send</button>
+      </form>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

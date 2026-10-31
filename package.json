@@ -1,0 +1,12 @@
+{
+  "name": "local-ai-chatbot",
+  "version": "1.0.0",
+  "description": "Local AI chatbot using Node.js, Express and Ollama (Llama 3.2)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": { "express": "^4.19.2" }
+}
